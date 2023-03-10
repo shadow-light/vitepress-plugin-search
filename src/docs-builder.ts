@@ -119,7 +119,7 @@ interface Doc {
 
 const buildDoc = (mdDoc: MdIndexDoc, id: string): Doc => {
   let m, t;
-  let a = mdDoc.anchor;
+  let a = t = mdDoc.anchor;
   if ((m = /\{(.*?)\}/m.exec(mdDoc.anchor)) !== null) {
     a = m[0];
     t = mdDoc.anchor.replace(/\{(.*?)\}/m, "");
